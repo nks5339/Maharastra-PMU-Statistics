@@ -1,0 +1,351 @@
+District,district_name,productivity_index,nic3_code,nic3_name,rank
+2701,Nandurbar,219.35283,131,"Spinning, weaving and finishing of textiles",1
+2701,Nandurbar,29.054832,107,Manufacture of other food products,2
+2701,Nandurbar,21.092592,191,Manufacture of coke oven products,3
+2701,Nandurbar,20.615332,390,Remediation activities and other waste management services,4
+2701,Nandurbar,13.676409,351,"Electric power generation, transmission and distribution",5
+2701,Nandurbar,12.975997,170,Manufacture of paper and paper products,6
+2701,Nandurbar,11.84355,108,Manufacture of prepared animal feeds,7
+2701,Nandurbar,10.826522,641,Monetary intermediation,8
+2701,Nandurbar,9.1117125,104,Manufacture of vegetable and animal oils and fats,9
+2701,Nandurbar,8.9886103,721,"Research  and  experimental  dev.  on natural sci. , engineering",10
+2702,Dhule,62.621113,104,Manufacture of vegetable and animal oils and fats,1
+2702,Dhule,34.159481,91,Support activities for petroleum and natural gas mining,2
+2702,Dhule,25.173632,351,"Electric power generation, transmission and distribution",3
+2702,Dhule,24.866282,802,Security systems service activities,4
+2702,Dhule,22.405235,139,Manufacture of other textiles,5
+2702,Dhule,21.76425,261,Manufacture of electronic components,6
+2702,Dhule,19.245768,108,Manufacture of prepared animal feeds,7
+2702,Dhule,14.884459,812,Cleaning activities,8
+2702,Dhule,13.981799,641,Monetary intermediation,9
+2702,Dhule,13.974843,801,Private security activities,10
+2703,Jalgaon,88.124138,292,Manufacture of bodies (coachwork) for motor vehicles; trailers …,1
+2703,Jalgaon,65.493607,120,Manufacture of tobacco products,2
+2703,Jalgaon,50.252106,282,Manufacture of special-purpose machinery,3
+2703,Jalgaon,42.696495,108,Manufacture of prepared animal feeds,4
+2703,Jalgaon,24.462608,274,Manufacture of electric lighting equipment,5
+2703,Jalgaon,22.9042,351,"Electric power generation, transmission and distribution",6
+2703,Jalgaon,22.44565,201,"Manufacture of basic chemicals, fertilizer …",7
+2703,Jalgaon,22.291191,491,Transport via railways,8
+2703,Jalgaon,22.107395,202,Manufacture of other chemical products,9
+2703,Jalgaon,21.591717,192,Manufacture of refined petroleum products,10
+2704,Buldana,43.505684,332,Installation of industrial machinery and equipment,1
+2704,Buldana,34.489239,192,Manufacture of refined petroleum products,2
+2704,Buldana,30.219843,131,"Spinning, weaving and finishing of textiles",3
+2704,Buldana,23.233912,107,Manufacture of other food products,4
+2704,Buldana,22.649109,267,Manufacture of optical instruments and equipment,5
+2704,Buldana,17.014143,239,Manufacture of non-metallic mineral products n.e.c.,6
+2704,Buldana,15.74838,170,Manufacture of paper and paper products,7
+2704,Buldana,15.267619,251,"Manufacture of structural metal products, tanks, reservoirs …",8
+2704,Buldana,10.860678,353,Steam and air conditioning supply,9
+2704,Buldana,10.847872,941,"Activities   of   business,   employers,  prof.  membership org.",10
+2705,Akola,80.690735,493,Transport via pipeline,1
+2705,Akola,44.404331,351,"Electric power generation, transmission and distribution",2
+2705,Akola,22.94961,210,"Manufacture of pharmaceuticals, medicinal chemical …",3
+2705,Akola,20.208488,281,Manufacture of general purpose machinery,4
+2705,Akola,13.694566,279,Manufacture of other electrical equipment,5
+2705,Akola,12.808223,131,"Spinning, weaving and finishing of textiles",6
+2705,Akola,12.771165,370,Sewerage,7
+2705,Akola,12.120155,222,Manufacture of plastics products,8
+2705,Akola,11.934044,181,Printing and service activities related to printing,9
+2705,Akola,11.464047,353,Steam and air conditioning supply,10
+2706,Washim,22.687742,522,Support activities for transportation,1
+2706,Washim,20.067982,202,Manufacture of other chemical products,2
+2706,Washim,18.858038,653,Pension funding,3
+2706,Washim,13.974639,99,Support activities for other mining and quarrying,4
+2706,Washim,13.274161,351,"Electric power generation, transmission and distribution",5
+2706,Washim,11.688593,619,Other telecommunications activities,6
+2706,Washim,10.15373,802,Security systems service activities,7
+2706,Washim,9.7250462,421,Construction of roads and railways,8
+2706,Washim,9.4782333,641,Monetary intermediation,9
+2706,Washim,8.7329197,451,Sale of motor vehicles,10
+2707,Amravati,65.16407,353,Steam and air conditioning supply,1
+2707,Amravati,61.318821,131,"Spinning, weaving and finishing of textiles",2
+2707,Amravati,25.680412,782,Temporary employment agency activities,3
+2707,Amravati,24.15905,264,Manufacture of consumer electronics,4
+2707,Amravati,21.067083,783,"Human resources provision, management of human resources func.",5
+2707,Amravati,20.161421,351,"Electric power generation, transmission and distribution",6
+2707,Amravati,12.593404,466,Other specialized wholesale,7
+2707,Amravati,12.40836,62,Extraction of natural gas,8
+2707,Amravati,11.219605,241,Manufacture of basic iron and steel,9
+2707,Amravati,8.9462633,360,"Water collection, treatment and supply",10
+2708,Wardha,41.111771,16,Support activities to agriculture and post-harvest crop activities,1
+2708,Wardha,24.477814,201,"Manufacture of basic chemicals, fertilizer …",2
+2708,Wardha,12.64941,302,Manufacture of railway locomotives and rolling stock,3
+2708,Wardha,12.355229,131,"Spinning, weaving and finishing of textiles",4
+2708,Wardha,12.237669,221,Manufacture of rubber products,5
+2708,Wardha,10.858459,202,Manufacture of other chemical products,6
+2708,Wardha,10.093164,872,"Residential care activities for mental retardation, mental health …",7
+2708,Wardha,10.028026,351,"Electric power generation, transmission and distribution",8
+2708,Wardha,9.9906855,222,Manufacture of plastics products,9
+2708,Wardha,9.7626438,104,Manufacture of vegetable and animal oils and fats,10
+2709,Nagpur,202.17175,72,Mining of non-ferrous metal ores,1
+2709,Nagpur,178.80753,293,Manufacture of parts and accessories for motor vehicles,2
+2709,Nagpur,154.76891,263,Manufacture of communication equipment,3
+2709,Nagpur,132.21304,261,Manufacture of electronic components,4
+2709,Nagpur,68.6632,21,Silviculture and other forestry activities,5
+2709,Nagpur,50.125744,242,Manufacture of basic precious and other non-ferrous metals,6
+2709,Nagpur,49.841045,491,Transport via railways,7
+2709,Nagpur,46.816227,241,Manufacture of basic iron and steel,8
+2709,Nagpur,42.755253,191,Manufacture of coke oven products,9
+2709,Nagpur,41.772163,91,Support activities for petroleum and natural gas mining,10
+2710,Bhandara,758.75671,241,Manufacture of basic iron and steel,1
+2710,Bhandara,472.56833,292,Manufacture of bodies (coachwork) for motor vehicles; trailers …,2
+2710,Bhandara,212.14847,293,Manufacture of parts and accessories for motor vehicles,3
+2710,Bhandara,173.32239,210,"Manufacture of pharmaceuticals, medicinal chemical …",4
+2710,Bhandara,71.743057,421,Construction of roads and railways,5
+2710,Bhandara,40.938675,282,Manufacture of special-purpose machinery,6
+2710,Bhandara,39.655628,721,"Research  and  experimental  dev.  on natural sci. , engineering",7
+2710,Bhandara,26.957668,242,Manufacture of basic precious and other non-ferrous metals,8
+2710,Bhandara,16.49567,32,Aquaculture,9
+2710,Bhandara,13.466143,351,"Electric power generation, transmission and distribution",10
+2711,Gondiya,42.825626,351,"Electric power generation, transmission and distribution",1
+2711,Gondiya,20.701441,21,Silviculture and other forestry activities,2
+2711,Gondiya,20.389505,192,Manufacture of refined petroleum products,3
+2711,Gondiya,19.947733,281,Manufacture of general purpose machinery,4
+2711,Gondiya,15.941381,491,Transport via railways,5
+2711,Gondiya,12.322932,822,Activities of call centres,6
+2711,Gondiya,11.176535,642,Activities of holding companies,7
+2711,Gondiya,10.625655,602,Television  programming and broadcasting activities,8
+2711,Gondiya,9.8936882,222,Manufacture of plastics products,9
+2711,Gondiya,9.7811451,783,"Human resources provision, management of human resources func.",10
+2712,Gadchiroli,142.45676,210,"Manufacture of pharmaceuticals, medicinal chemical …",1
+2712,Gadchiroli,67.810051,170,Manufacture of paper and paper products,2
+2712,Gadchiroli,49.318119,802,Security systems service activities,3
+2712,Gadchiroli,33.838715,108,Manufacture of prepared animal feeds,4
+2712,Gadchiroli,29.762835,89,Mining and quarrying n.e.c.,5
+2712,Gadchiroli,20.502277,421,Construction of roads and railways,6
+2712,Gadchiroli,19.277683,332,Installation of industrial machinery and equipment,7
+2712,Gadchiroli,16.771776,829,Business support service activities n.e.c.,8
+2712,Gadchiroli,13.077332,461,Wholesale on a fee or contract basis,9
+2712,Gadchiroli,13.066734,201,"Manufacture of basic chemicals, fertilizer …",10
+2713,Chandrapur,648.56744,52,Mining of lignite,1
+2713,Chandrapur,190.48541,241,Manufacture of basic iron and steel,2
+2713,Chandrapur,171.68871,51,Mining of hard coal,3
+2713,Chandrapur,89.140808,261,Manufacture of electronic components,4
+2713,Chandrapur,47.539421,801,Private security activities,5
+2713,Chandrapur,42.799175,242,Manufacture of basic precious and other non-ferrous metals,6
+2713,Chandrapur,37.2827,421,Construction of roads and railways,7
+2713,Chandrapur,33.40435,351,"Electric power generation, transmission and distribution",8
+2713,Chandrapur,25.770727,293,Manufacture of parts and accessories for motor vehicles,9
+2713,Chandrapur,25.657417,81,"Quarrying of stone, sand and clay",10
+2714,Yavatmal,257.86548,139,Manufacture of other textiles,1
+2714,Yavatmal,155.86552,52,Mining of lignite,2
+2714,Yavatmal,39.822487,353,Steam and air conditioning supply,3
+2714,Yavatmal,36.940094,89,Mining and quarrying n.e.c.,4
+2714,Yavatmal,29.383701,170,Manufacture of paper and paper products,5
+2714,Yavatmal,21.632437,821,Office administrative and support activities,6
+2714,Yavatmal,18.919073,131,"Spinning, weaving and finishing of textiles",7
+2714,Yavatmal,13.763382,351,"Electric power generation, transmission and distribution",8
+2714,Yavatmal,13.618517,107,Manufacture of other food products,9
+2714,Yavatmal,11.076523,61,Extraction of crude petroleum,10
+2715,Nanded,104.3065,701,Activities of head offices,1
+2715,Nanded,49.530979,210,"Manufacture of pharmaceuticals, medicinal chemical …",2
+2715,Nanded,37.228798,241,Manufacture of basic iron and steel,3
+2715,Nanded,26.385727,21,Silviculture and other forestry activities,4
+2715,Nanded,25.701729,24,Support services to forestry,5
+2715,Nanded,18.329723,201,"Manufacture of basic chemicals, fertilizer …",6
+2715,Nanded,16.919735,721,"Research  and  experimental  dev.  on natural sci. , engineering",7
+2715,Nanded,15.954721,601,Radio broadcasting,8
+2715,Nanded,14.033302,465,"Wholesale of machinery, equipment and supplies",9
+2715,Nanded,14.028514,491,Transport via railways,10
+2716,Hingoli,24.623972,791,Travel agency and tour operator activities,1
+2716,Hingoli,17.558096,351,"Electric power generation, transmission and distribution",2
+2716,Hingoli,17.124554,781,Activities of employment placement agencies,3
+2716,Hingoli,12.021022,451,Sale of motor vehicles,4
+2716,Hingoli,11.574588,107,Manufacture of other food products,5
+2716,Hingoli,10.267081,99,Support activities for other mining and quarrying,6
+2716,Hingoli,10.07808,221,Manufacture of rubber products,7
+2716,Hingoli,9.429019,653,Pension funding,8
+2716,Hingoli,9.1709909,801,Private security activities,9
+2716,Hingoli,9.0982456,502,Inland water transport,10
+2717,Parbhani,24.325844,522,Support activities for transportation,1
+2717,Parbhani,18.24159,721,"Research  and  experimental  dev.  on natural sci. , engineering",2
+2717,Parbhani,16.85129,351,"Electric power generation, transmission and distribution",3
+2717,Parbhani,13.897222,642,Activities of holding companies,4
+2717,Parbhani,11.122671,99,Support activities for other mining and quarrying,5
+2717,Parbhani,10.306894,821,Office administrative and support activities,6
+2717,Parbhani,10.050422,282,Manufacture of special-purpose machinery,7
+2717,Parbhani,9.6674376,191,Manufacture of coke oven products,8
+2717,Parbhani,9.438446,352,Manufacture of gas; distribution of gaseous fuels through mains,9
+2717,Parbhani,9.3905668,239,Manufacture of non-metallic mineral products n.e.c.,10
+2718,Jalna,204.15796,242,Manufacture of basic precious and other non-ferrous metals,1
+2718,Jalna,56.049412,201,"Manufacture of basic chemicals, fertilizer …",2
+2718,Jalna,42.661835,241,Manufacture of basic iron and steel,3
+2718,Jalna,39.822487,353,Steam and air conditioning supply,4
+2718,Jalna,24.199167,191,Manufacture of coke oven products,5
+2718,Jalna,23.98531,131,"Spinning, weaving and finishing of textiles",6
+2718,Jalna,23.933607,107,Manufacture of other food products,7
+2718,Jalna,20.119301,104,Manufacture of vegetable and animal oils and fats,8
+2718,Jalna,16.10013,722,"Research and experimental development on social sci., humanities",9
+2718,Jalna,11.304402,222,Manufacture of plastics products,10
+2719,Aurangabad,615.30078,264,Manufacture of consumer electronics,1
+2719,Aurangabad,543.57861,267,Manufacture of optical instruments and equipment,2
+2719,Aurangabad,251.16417,201,"Manufacture of basic chemicals, fertilizer …",3
+2719,Aurangabad,233.82719,210,"Manufacture of pharmaceuticals, medicinal chemical …",4
+2719,Aurangabad,207.84679,822,Activities of call centres,5
+2719,Aurangabad,182.3885,265,"Manufacture of measuring, testing, navigating and control equip …",6
+2719,Aurangabad,125.32964,591,"Motion picture, video and television programme activities",7
+2719,Aurangabad,122.25769,242,Manufacture of basic precious and other non-ferrous metals,8
+2719,Aurangabad,75.122871,120,Manufacture of tobacco products,9
+2719,Aurangabad,56.553146,281,Manufacture of general purpose machinery,10
+2720,Nashik,269.62695,210,"Manufacture of pharmaceuticals, medicinal chemical …",1
+2720,Nashik,194.1945,241,Manufacture of basic iron and steel,2
+2720,Nashik,181.29178,293,Manufacture of parts and accessories for motor vehicles,3
+2720,Nashik,103.99508,620,"Computer programming, consultancy and related activities",4
+2720,Nashik,97.654556,271,"Manufacture of electric motors, generators, transformers …",5
+2720,Nashik,90.67469,382,Waste treatment and disposal,6
+2720,Nashik,90.046867,242,Manufacture of basic precious and other non-ferrous metals,7
+2720,Nashik,89.013077,231,Manufacture of glass and glass products,8
+2720,Nashik,86.751976,282,Manufacture of special-purpose machinery,9
+2720,Nashik,69.050743,262,Manufacture of computers and peripheral equipment,10
+2721,Thane,173.97473,822,Activities of call centres,1
+2721,Thane,144.77303,291,Manufacture of motor vehicles,2
+2721,Thane,144.03465,192,Manufacture of refined petroleum products,3
+2721,Thane,122.91029,293,Manufacture of parts and accessories for motor vehicles,4
+2721,Thane,106.9473,722,"Research and experimental development on social sci., humanities",5
+2721,Thane,104.88622,620,"Computer programming, consultancy and related activities",6
+2721,Thane,98.889832,619,Other telecommunications activities,7
+2721,Thane,77.006973,268,Manufacture of magnetic and optical media,8
+2721,Thane,72.894218,201,"Manufacture of basic chemicals, fertilizer …",9
+2721,Thane,63.785622,210,"Manufacture of pharmaceuticals, medicinal chemical …",10
+2722,Mumbai Suburban,306.12424,822,Activities of call centres,1
+2722,Mumbai Suburban,158.9962,89,Mining and quarrying n.e.c.,2
+2722,Mumbai Suburban,123.88592,722,"Research and experimental development on social sci., humanities",3
+2722,Mumbai Suburban,114.56982,639,Other information service activities,4
+2722,Mumbai Suburban,97.42382,351,"Electric power generation, transmission and distribution",5
+2722,Mumbai Suburban,78.476547,620,"Computer programming, consultancy and related activities",6
+2722,Mumbai Suburban,74.603607,749,"Other professional, scientific and technical activities n.e.c.",7
+2722,Mumbai Suburban,70.672874,871,Nursing care facilities,8
+2722,Mumbai Suburban,67.01622,721,"Research  and  experimental  dev.  on natural sci. , engineering",9
+2722,Mumbai Suburban,59.498913,210,"Manufacture of pharmaceuticals, medicinal chemical …",10
+2723,Mumbai,149.09915,722,"Research and experimental development on social sci., humanities",1
+2723,Mumbai,85.951973,783,"Human resources provision, management of human resources func.",2
+2723,Mumbai,75.091431,781,Activities of employment placement agencies,3
+2723,Mumbai,69.989845,861,Hospital activities,4
+2723,Mumbai,63.571545,431,Demolition and site preparation,5
+2723,Mumbai,58.58078,641,Monetary intermediation,6
+2723,Mumbai,57.524097,602,Television  programming and broadcasting activities,7
+2723,Mumbai,56.600136,210,"Manufacture of pharmaceuticals, medicinal chemical …",8
+2723,Mumbai,55.437153,531,Postal activities,9
+2723,Mumbai,53.392773,192,Manufacture of refined petroleum products,10
+2724,Raigarh,592.6272,192,Manufacture of refined petroleum products,1
+2724,Raigarh,299.04568,241,Manufacture of basic iron and steel,2
+2724,Raigarh,287.55988,243,Casting of metals,3
+2724,Raigarh,219.75468,201,"Manufacture of basic chemicals, fertilizer …",4
+2724,Raigarh,100.08727,210,"Manufacture of pharmaceuticals, medicinal chemical …",5
+2724,Raigarh,93.981567,202,Manufacture of other chemical products,6
+2724,Raigarh,68.786285,203,Manufacture of man-made fibres,7
+2724,Raigarh,62.159985,281,Manufacture of general purpose machinery,8
+2724,Raigarh,61.986023,222,Manufacture of plastics products,9
+2724,Raigarh,50.413525,282,Manufacture of special-purpose machinery,10
+2725,Pune,505.16678,291,Manufacture of motor vehicles,1
+2725,Pune,396.36411,262,Manufacture of computers and peripheral equipment,2
+2725,Pune,145.53668,620,"Computer programming, consultancy and related activities",3
+2725,Pune,141.96803,822,Activities of call centres,4
+2725,Pune,125.65776,293,Manufacture of parts and accessories for motor vehicles,5
+2725,Pune,124.89779,353,Steam and air conditioning supply,6
+2725,Pune,102.75058,265,"Manufacture of measuring, testing, navigating and control equip …",7
+2725,Pune,96.026756,273,Manufacture of wiring and wiring devices,8
+2725,Pune,75.68309,201,"Manufacture of basic chemicals, fertilizer …",9
+2725,Pune,62.399506,210,"Manufacture of pharmaceuticals, medicinal chemical …",10
+2726,Ahmadnagar,188.81808,293,Manufacture of parts and accessories for motor vehicles,1
+2726,Ahmadnagar,151.39748,872,"Residential care activities for mental retardation, mental health …",2
+2726,Ahmadnagar,143.60753,281,Manufacture of general purpose machinery,3
+2726,Ahmadnagar,102.24007,243,Casting of metals,4
+2726,Ahmadnagar,76.127441,271,"Manufacture of electric motors, generators, transformers …",5
+2726,Ahmadnagar,72.583893,210,"Manufacture of pharmaceuticals, medicinal chemical …",6
+2726,Ahmadnagar,55.155079,292,Manufacture of bodies (coachwork) for motor vehicles; trailers …,7
+2726,Ahmadnagar,49.808941,103,Processing and preserving of fruit and vegetables,8
+2726,Ahmadnagar,41.384747,282,Manufacture of special-purpose machinery,9
+2726,Ahmadnagar,29.847689,203,Manufacture of man-made fibres,10
+2727,Bid,119.43424,653,Pension funding,1
+2727,Bid,13.416132,351,"Electric power generation, transmission and distribution",2
+2727,Bid,11.44149,107,Manufacture of other food products,3
+2727,Bid,11.181184,829,Business support service activities n.e.c.,4
+2727,Bid,9.0529547,641,Monetary intermediation,5
+2727,Bid,8.5622768,781,Activities of employment placement agencies,6
+2727,Bid,8.4884357,559,Other accommodation,7
+2727,Bid,7.2832909,465,"Wholesale of machinery, equipment and supplies",8
+2727,Bid,6.9646688,871,Nursing care facilities,9
+2727,Bid,6.7688994,431,Demolition and site preparation,10
+2728,Latur,75.371025,131,"Spinning, weaving and finishing of textiles",1
+2728,Latur,49.000256,201,"Manufacture of basic chemicals, fertilizer …",2
+2728,Latur,30.450457,382,Waste treatment and disposal,3
+2728,Latur,27.496365,381,Waste collection,4
+2728,Latur,25.619478,813,Landscape care and maintenance service activities,5
+2728,Latur,25.518694,421,Construction of roads and railways,6
+2728,Latur,22.571875,783,"Human resources provision, management of human resources func.",7
+2728,Latur,19.980877,282,Manufacture of special-purpose machinery,8
+2728,Latur,19.971241,279,Manufacture of other electrical equipment,9
+2728,Latur,18.342478,352,Manufacture of gas; distribution of gaseous fuels through mains,10
+2729,Osmanabad,45.259888,107,Manufacture of other food products,1
+2729,Osmanabad,41.076443,822,Activities of call centres,2
+2729,Osmanabad,31.729269,241,Manufacture of basic iron and steel,3
+2729,Osmanabad,27.444395,210,"Manufacture of pharmaceuticals, medicinal chemical …",4
+2729,Osmanabad,15.752292,351,"Electric power generation, transmission and distribution",5
+2729,Osmanabad,13.786122,421,Construction of roads and railways,6
+2729,Osmanabad,13.535485,108,Manufacture of prepared animal feeds,7
+2729,Osmanabad,12.575675,251,"Manufacture of structural metal products, tanks, reservoirs …",8
+2729,Osmanabad,12.532499,649,"Other financial service activities, except insurance, pension ….",9
+2729,Osmanabad,11.436263,453,Sale of motor vehicle parts and accessories,10
+2730,Solapur,619.75452,293,Manufacture of parts and accessories for motor vehicles,1
+2730,Solapur,513.84064,302,Manufacture of railway locomotives and rolling stock,2
+2730,Solapur,66.187958,221,Manufacture of rubber products,3
+2730,Solapur,49.586731,108,Manufacture of prepared animal feeds,4
+2730,Solapur,49.495419,282,Manufacture of special-purpose machinery,5
+2730,Solapur,39.843002,749,"Other professional, scientific and technical activities n.e.c.",6
+2730,Solapur,39.308704,210,"Manufacture of pharmaceuticals, medicinal chemical …",7
+2730,Solapur,39.183083,243,Casting of metals,8
+2730,Solapur,29.051991,382,Waste treatment and disposal,9
+2730,Solapur,28.9583,279,Manufacture of other electrical equipment,10
+2731,Satara,228.756,264,Manufacture of consumer electronics,1
+2731,Satara,155.7924,302,Manufacture of railway locomotives and rolling stock,2
+2731,Satara,132.29533,275,Manufacture of domestic appliances,3
+2731,Satara,131.0435,309,Manufacture of transport equipment n.e.c.,4
+2731,Satara,81.321014,210,"Manufacture of pharmaceuticals, medicinal chemical …",5
+2731,Satara,78.267883,325,Manufacture of medical and dental instruments and supplies,6
+2731,Satara,70.629143,108,Manufacture of prepared animal feeds,7
+2731,Satara,65.013351,293,Manufacture of parts and accessories for motor vehicles,8
+2731,Satara,53.350021,243,Casting of metals,9
+2731,Satara,52.788929,261,Manufacture of electronic components,10
+2732,Ratnagiri,177.44435,872,"Residential care activities for mental retardation, mental health …",1
+2732,Ratnagiri,98.224785,202,Manufacture of other chemical products,2
+2732,Ratnagiri,92.773476,151,"Tanning and dressing of leather; manuf. of luggage, handbags, …",3
+2732,Ratnagiri,69.541367,210,"Manufacture of pharmaceuticals, medicinal chemical …",4
+2732,Ratnagiri,63.702847,783,"Human resources provision, management of human resources func.",5
+2732,Ratnagiri,42.435623,264,Manufacture of consumer electronics,6
+2732,Ratnagiri,40.316238,491,Transport via railways,7
+2732,Ratnagiri,34.297638,201,"Manufacture of basic chemicals, fertilizer …",8
+2732,Ratnagiri,33.940075,89,Mining and quarrying n.e.c.,9
+2732,Ratnagiri,30.659121,421,Construction of roads and railways,10
+2733,Sindhudurg,53.989716,221,Manufacture of rubber products,1
+2733,Sindhudurg,43.145329,721,"Research  and  experimental  dev.  on natural sci. , engineering",2
+2733,Sindhudurg,41.632599,353,Steam and air conditioning supply,3
+2733,Sindhudurg,38.015717,522,Support activities for transportation,4
+2733,Sindhudurg,36.628422,872,"Residential care activities for mental retardation, mental health …",5
+2733,Sindhudurg,27.138445,491,Transport via railways,6
+2733,Sindhudurg,23.387518,782,Temporary employment agency activities,7
+2733,Sindhudurg,18.83473,273,Manufacture of wiring and wiring devices,8
+2733,Sindhudurg,14.993754,332,Installation of industrial machinery and equipment,9
+2733,Sindhudurg,14.339179,89,Mining and quarrying n.e.c.,10
+2734,Kolhapur,148.83865,291,Manufacture of motor vehicles,1
+2734,Kolhapur,42.792526,243,Casting of metals,2
+2734,Kolhapur,38.600193,275,Manufacture of domestic appliances,3
+2734,Kolhapur,38.012371,353,Steam and air conditioning supply,4
+2734,Kolhapur,35.0704,91,Support activities for petroleum and natural gas mining,5
+2734,Kolhapur,34.96241,241,Manufacture of basic iron and steel,6
+2734,Kolhapur,27.02627,231,Manufacture of glass and glass products,7
+2734,Kolhapur,23.051863,582,Software publishing,8
+2734,Kolhapur,17.638653,293,Manufacture of parts and accessories for motor vehicles,9
+2734,Kolhapur,17.024664,210,"Manufacture of pharmaceuticals, medicinal chemical …",10
+2735,Sangli,49.269947,473,Retail sale of automotive fuel in specialized stores,1
+2735,Sangli,29.441082,469,Non-specialized wholesale trade,2
+2735,Sangli,28.425337,108,Manufacture of prepared animal feeds,3
+2735,Sangli,27.767975,293,Manufacture of parts and accessories for motor vehicles,4
+2735,Sangli,18.420298,243,Casting of metals,5
+2735,Sangli,17.368423,107,Manufacture of other food products,6
+2735,Sangli,15.588585,352,Manufacture of gas; distribution of gaseous fuels through mains,7
+2735,Sangli,15.498966,881,"Social work activities without accom. for the elderly, disabled",8
+2735,Sangli,15.298039,351,"Electric power generation, transmission and distribution",9
+2735,Sangli,14.759429,131,"Spinning, weaving and finishing of textiles",10

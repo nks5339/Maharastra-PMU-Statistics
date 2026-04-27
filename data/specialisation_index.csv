@@ -1,0 +1,351 @@
+District,district_name,specialisation_index,nic3_code,nic3_name,rank
+2701,Nandurbar,.056777019,110,Manufacture of beverages,1
+2701,Nandurbar,.032957055,479,"Retail trade not in stores, stalls or markets",2
+2701,Nandurbar,.027383368,323,Manufacture of sports goods,3
+2701,Nandurbar,.027128428,21,Silviculture and other forestry activities,4
+2701,Nandurbar,.025962045,104,Manufacture of vegetable and animal oils and fats,5
+2701,Nandurbar,.024566749,741,Specialized design activities,6
+2701,Nandurbar,.023209855,101,Processing and preserving of meat,7
+2701,Nandurbar,.020576132,103,Processing and preserving of fruit and vegetables,8
+2701,Nandurbar,.020413006,881,"Social work activities without accom. for the elderly, disabled",9
+2701,Nandurbar,.017708071,108,Manufacture of prepared animal feeds,10
+2702,Dhule,.14457038,104,Manufacture of vegetable and animal oils and fats,1
+2702,Dhule,.054034922,22,Logging,2
+2702,Dhule,.046040982,108,Manufacture of prepared animal feeds,3
+2702,Dhule,.04473304,21,Silviculture and other forestry activities,4
+2702,Dhule,.036273707,106,"Manufacture of grain mill products, starches and starch products",5
+2702,Dhule,.035063114,91,Support activities for petroleum and natural gas mining,6
+2702,Dhule,.03014479,881,"Social work activities without accom. for the elderly, disabled",7
+2702,Dhule,.028605357,351,"Electric power generation, transmission and distribution",8
+2702,Dhule,.028456319,139,Manufacture of other textiles,9
+2702,Dhule,.0282136,454,"Sale,  maintenance  and  repair  of  motorcycles; related parts ...",10
+2703,Jalgaon,.12328546,932,Other amusement and recreation activities,1
+2703,Jalgaon,.11688676,649,"Other financial service activities, except insurance, pension ….",2
+2703,Jalgaon,.10852516,108,Manufacture of prepared animal feeds,3
+2703,Jalgaon,.090197518,292,Manufacture of bodies (coachwork) for motor vehicles; trailers …,4
+2703,Jalgaon,.089437693,471,Retail sale in non-specialized stores,5
+2703,Jalgaon,.087398373,774,Leasing of nonfinancial intangible assets,6
+2703,Jalgaon,.083333336,23,Gathering of non-wood forest products,7
+2703,Jalgaon,.083073653,479,"Retail trade not in stores, stalls or markets",8
+2703,Jalgaon,.080222934,491,Transport via railways,9
+2703,Jalgaon,.076185398,469,Non-specialized wholesale trade,10
+2704,Buldana,.22077294,332,Installation of industrial machinery and equipment,1
+2704,Buldana,.1963464,522,Support activities for transportation,2
+2704,Buldana,.16640028,469,Non-specialized wholesale trade,3
+2704,Buldana,.13006166,105,Manufacture of dairy products,4
+2704,Buldana,.090766825,61,Extraction of crude petroleum,5
+2704,Buldana,.077513263,81,"Quarrying of stone, sand and clay",6
+2704,Buldana,.073529407,266,"Manufacture   of   irradiation,   electromedical  …",7
+2704,Buldana,.058830403,471,Retail sale in non-specialized stores,8
+2704,Buldana,.054718297,799,Other reservation service activities,9
+2704,Buldana,.053452116,749,"Other professional, scientific and technical activities n.e.c.",10
+2705,Akola,.46592844,493,Transport via pipeline,1
+2705,Akola,.38968939,16,Support activities to agriculture and post-harvest crop activities,2
+2705,Akola,.2645435,17,"Hunting, trapping and related service activities",3
+2705,Akola,.25454545,21,Silviculture and other forestry activities,4
+2705,Akola,.15447155,774,Leasing of nonfinancial intangible assets,5
+2705,Akola,.15420009,22,Logging,6
+2705,Akola,.090909086,71,Mining of iron ores,7
+2705,Akola,.08055976,52,Mining of lignite,8
+2705,Akola,.071009077,592,Sound recording and music publishing activities,9
+2705,Akola,.070882559,370,Sewerage,10
+2706,Washim,.070707068,99,Support activities for other mining and quarrying,1
+2706,Washim,.068501927,191,Manufacture of coke oven products,2
+2706,Washim,.045144804,493,Transport via pipeline,3
+2706,Washim,.045038357,749,"Other professional, scientific and technical activities n.e.c.",4
+2706,Washim,.038461536,653,Pension funding,5
+2706,Washim,.022574838,471,Retail sale in non-specialized stores,6
+2706,Washim,.02255372,469,Non-specialized wholesale trade,7
+2706,Washim,.014657894,910,"Libraries, archives, museums and other cultural activities",8
+2706,Washim,.013256284,492,Other land transport,9
+2706,Washim,.012739819,360,"Water collection, treatment and supply",10
+2707,Amravati,.19999999,71,Mining of iron ores,1
+2707,Amravati,.16865133,522,Support activities for transportation,2
+2707,Amravati,.13294797,941,"Activities   of   business,   employers,  prof.  membership org.",3
+2707,Amravati,.1104034,17,"Hunting, trapping and related service activities",4
+2707,Amravati,.10855567,811,Combined facilities support activities,5
+2707,Amravati,.10696761,24,Support services to forestry,6
+2707,Amravati,.082180671,661,"Activities auxiliary to financial service act., except insurance …",7
+2707,Amravati,.078447841,471,Retail sale in non-specialized stores,8
+2707,Amravati,.073238917,329,Other manufacturing n.e.c.,9
+2707,Amravati,.071428575,62,Extraction of natural gas,10
+2708,Wardha,.3206394,302,Manufacture of railway locomotives and rolling stock,1
+2708,Wardha,.12187455,663,Fund management activities,2
+2708,Wardha,.11627298,478,Retail sale via stalls and markets,3
+2708,Wardha,.10414746,652,Reinsurance,4
+2708,Wardha,.058260832,471,Retail sale in non-specialized stores,5
+2708,Wardha,.050170142,462,Wholesale of agricultural raw materials and live animals,6
+2708,Wardha,.043478262,62,Extraction of natural gas,7
+2708,Wardha,.042567212,104,Manufacture of vegetable and animal oils and fats,8
+2708,Wardha,.036810756,16,Support activities to agriculture and post-harvest crop activities,9
+2708,Wardha,.036477212,773,"Renting and leasing of other machinery, equip., tangible goods n.e.c.",10
+2709,Nagpur,.61754453,642,Activities of holding companies,1
+2709,Nagpur,.55453503,72,Mining of non-ferrous metal ores,2
+2709,Nagpur,.42429864,799,Other reservation service activities,3
+2709,Nagpur,.33118674,811,Combined facilities support activities,4
+2709,Nagpur,.30014026,91,Support activities for petroleum and natural gas mining,5
+2709,Nagpur,.2880922,191,Manufacture of coke oven products,6
+2709,Nagpur,.25974026,99,Support activities for other mining and quarrying,7
+2709,Nagpur,.25683513,32,Aquaculture,8
+2709,Nagpur,.21061946,242,Manufacture of basic precious and other non-ferrous metals,9
+2709,Nagpur,.19980727,51,Mining of hard coal,10
+2710,Bhandara,.18498476,889,Other social work activities without accommodation n.e.c.,1
+2710,Bhandara,.12002543,120,Manufacture of tobacco products,2
+2710,Bhandara,.076513164,241,Manufacture of basic iron and steel,3
+2710,Bhandara,.07603918,773,"Renting and leasing of other machinery, equip., tangible goods n.e.c.",4
+2710,Bhandara,.061309032,32,Aquaculture,5
+2710,Bhandara,.048858203,421,Construction of roads and railways,6
+2710,Bhandara,.048789434,31,Fishing,7
+2710,Bhandara,.04617605,99,Support activities for other mining and quarrying,8
+2710,Bhandara,.041061945,242,Manufacture of basic precious and other non-ferrous metals,9
+2710,Bhandara,.040307242,292,Manufacture of bodies (coachwork) for motor vehicles; trailers …,10
+2711,Gondiya,.58990318,23,Gathering of non-wood forest products,1
+2711,Gondiya,.19340962,120,Manufacture of tobacco products,2
+2711,Gondiya,.11184756,32,Aquaculture,3
+2711,Gondiya,.073170736,774,Leasing of nonfinancial intangible assets,4
+2711,Gondiya,.036931816,783,"Human resources provision, management of human resources func.",5
+2711,Gondiya,.035216432,31,Fishing,6
+2711,Gondiya,.03261742,563,Beverage serving activities,7
+2711,Gondiya,.024991637,662,Activities auxiliary to insurance and pension funding,8
+2711,Gondiya,.024857644,772,Renting and leasing of personal and household goods,9
+2711,Gondiya,.024847632,750,Veterinary activities,10
+2712,Gadchiroli,.035992768,829,Business support service activities n.e.c.,1
+2712,Gadchiroli,.03222945,879,Other residential care activities n.e.c.,2
+2712,Gadchiroli,.028289754,663,Fund management activities,3
+2712,Gadchiroli,.023909984,750,Veterinary activities,4
+2712,Gadchiroli,.022170087,170,Manufacture of paper and paper products,5
+2712,Gadchiroli,.021797271,472,"Retail sale of food, beverages and tobacco in specialized stores",6
+2712,Gadchiroli,.020270269,162,"Manufacture of products of wood, cork, straw, plaiting materials",7
+2712,Gadchiroli,.01692667,952,Repair of personal and household goods,8
+2712,Gadchiroli,.016604468,631,"Data processing, hosting and related activities; web portals",9
+2712,Gadchiroli,.015330705,772,Renting and leasing of personal and household goods,10
+2713,Chandrapur,.61484098,51,Mining of hard coal,1
+2713,Chandrapur,.59568834,52,Mining of lignite,2
+2713,Chandrapur,.075047277,478,Retail sale via stalls and markets,3
+2713,Chandrapur,.043818463,61,Extraction of crude petroleum,4
+2713,Chandrapur,.043374211,31,Fishing,5
+2713,Chandrapur,.042049032,239,Manufacture of non-metallic mineral products n.e.c.,6
+2713,Chandrapur,.033895023,381,Waste collection,7
+2713,Chandrapur,.03387079,472,"Retail sale of food, beverages and tobacco in specialized stores",8
+2713,Chandrapur,.032318212,619,Other telecommunications activities,9
+2713,Chandrapur,.031373192,772,Renting and leasing of personal and household goods,10
+2714,Yavatmal,.35908085,89,Mining and quarrying n.e.c.,1
+2714,Yavatmal,.20347959,52,Mining of lignite,2
+2714,Yavatmal,.19660297,17,"Hunting, trapping and related service activities",3
+2714,Yavatmal,.099507734,562,Event catering and other food service activities,4
+2714,Yavatmal,.067005247,471,Retail sale in non-specialized stores,5
+2714,Yavatmal,.066151656,469,Non-specialized wholesale trade,6
+2714,Yavatmal,.065095395,267,Manufacture of optical instruments and equipment,7
+2714,Yavatmal,.062597811,61,Extraction of crude petroleum,8
+2714,Yavatmal,.057242181,243,Casting of metals,9
+2714,Yavatmal,.051439945,889,Other social work activities without accommodation n.e.c.,10
+2715,Nanded,.16793893,304,Manufacture of military fighting vehicles,1
+2715,Nanded,.14720313,24,Support services to forestry,2
+2715,Nanded,.091190226,471,Retail sale in non-specialized stores,3
+2715,Nanded,.064009458,491,Transport via railways,4
+2715,Nanded,.063867532,879,Other residential care activities n.e.c.,5
+2715,Nanded,.059451658,21,Silviculture and other forestry activities,6
+2715,Nanded,.05442572,381,Waste collection,7
+2715,Nanded,.051651865,331,"Repair of fabricated metal products, machinery and equipment",8
+2715,Nanded,.050660793,182,Reproduction of recorded media,9
+2715,Nanded,.040404044,99,Support activities for other mining and quarrying,10
+2716,Hingoli,.08911632,771,Renting and leasing of motor vehicles,1
+2716,Hingoli,.052040212,879,Other residential care activities n.e.c.,2
+2716,Hingoli,.05071377,105,Manufacture of dairy products,3
+2716,Hingoli,.019230768,653,Pension funding,4
+2716,Hingoli,.018887261,949,Activities of other membership organizations,5
+2716,Hingoli,.014075109,16,Support activities to agriculture and post-harvest crop activities,6
+2716,Hingoli,.012901224,310,Manufacture of furniture,7
+2716,Hingoli,.01186501,331,"Repair of fabricated metal products, machinery and equipment",8
+2716,Hingoli,.011596031,106,"Manufacture of grain mill products, starches and starch products",9
+2716,Hingoli,.011305336,329,Other manufacturing n.e.c.,10
+2717,Parbhani,.15336463,61,Extraction of crude petroleum,1
+2717,Parbhani,.091070369,879,Other residential care activities n.e.c.,2
+2717,Parbhani,.08417508,267,Manufacture of optical instruments and equipment,3
+2717,Parbhani,.083969466,304,Manufacture of military fighting vehicles,4
+2717,Parbhani,.067488752,105,Manufacture of dairy products,5
+2717,Parbhani,.061657514,771,Renting and leasing of motor vehicles,6
+2717,Parbhani,.05999675,461,Wholesale on a fee or contract basis,7
+2717,Parbhani,.055992022,103,Processing and preserving of fruit and vegetables,8
+2717,Parbhani,.049110319,721,"Research  and  experimental  dev.  on natural sci. , engineering",9
+2717,Parbhani,.044193085,471,Retail sale in non-specialized stores,10
+2718,Jalna,.18997176,102,"Processing and preserving of fish, crustaceans and molluscs",1
+2718,Jalna,.18846801,889,Other social work activities without accommodation n.e.c.,2
+2718,Jalna,.17868435,773,"Renting and leasing of other machinery, equip., tangible goods n.e.c.",3
+2718,Jalna,.14555907,105,Manufacture of dairy products,4
+2718,Jalna,.087111235,104,Manufacture of vegetable and animal oils and fats,5
+2718,Jalna,.076399796,429,Construction of other civil engineering projects,6
+2718,Jalna,.065221235,242,Manufacture of basic precious and other non-ferrous metals,7
+2718,Jalna,.058558151,241,Manufacture of basic iron and steel,8
+2718,Jalna,.054994389,103,Processing and preserving of fruit and vegetables,9
+2718,Jalna,.042514041,381,Waste collection,10
+2719,Aurangabad,.4040404,267,Manufacture of optical instruments and equipment,1
+2719,Aurangabad,.26708964,889,Other social work activities without accommodation n.e.c.,2
+2719,Aurangabad,.19420904,102,"Processing and preserving of fish, crustaceans and molluscs",3
+2719,Aurangabad,.15822785,265,"Manufacture of measuring, testing, navigating and control equip …",4
+2719,Aurangabad,.13829169,381,Waste collection,5
+2719,Aurangabad,.1377883,879,Other residential care activities n.e.c.,6
+2719,Aurangabad,.11463134,431,Demolition and site preparation,7
+2719,Aurangabad,.11143998,771,Renting and leasing of motor vehicles,8
+2719,Aurangabad,.10162602,774,Leasing of nonfinancial intangible assets,9
+2719,Aurangabad,.094150342,562,Event catering and other food service activities,10
+2720,Nashik,.36137527,292,Manufacture of bodies (coachwork) for motor vehicles; trailers …,1
+2720,Nashik,.26333588,293,Manufacture of parts and accessories for motor vehicles,2
+2720,Nashik,.25846627,271,"Manufacture of electric motors, generators, transformers …",3
+2720,Nashik,.24013604,261,Manufacture of electronic components,4
+2720,Nashik,.18867925,203,Manufacture of man-made fibres,5
+2720,Nashik,.18184507,879,Other residential care activities n.e.c.,6
+2720,Nashik,.17068519,210,"Manufacture of pharmaceuticals, medicinal chemical …",7
+2720,Nashik,.16652106,131,"Spinning, weaving and finishing of textiles",8
+2720,Nashik,.16232215,264,Manufacture of consumer electronics,9
+2720,Nashik,.15891144,221,Manufacture of rubber products,10
+2721,Thane,.89249998,268,Manufacture of magnetic and optical media,1
+2721,Thane,.59562838,303,Manufacture of air and spacecraft and related machinery,2
+2721,Thane,.42714098,274,Manufacture of electric lighting equipment,3
+2721,Thane,.40935394,201,"Manufacture of basic chemicals, fertilizer …",4
+2721,Thane,.39838141,131,"Spinning, weaving and finishing of textiles",5
+2721,Thane,.39341205,619,Other telecommunications activities,6
+2721,Thane,.37852517,722,"Research and experimental development on social sci., humanities",7
+2721,Thane,.36357245,265,"Manufacture of measuring, testing, navigating and control equip …",8
+2721,Thane,.36060572,829,Business support service activities n.e.c.,9
+2721,Thane,.35208926,192,Manufacture of refined petroleum products,10
+2722,Mumbai Suburban,.74539083,813,Landscape care and maintenance service activities,1
+2722,Mumbai Suburban,.62835401,152,Manufacture of footwear,2
+2722,Mumbai Suburban,.57898355,871,Nursing care facilities,3
+2722,Mumbai Suburban,.50484508,591,"Motion picture, video and television programme activities",4
+2722,Mumbai Suburban,.49560237,802,Security systems service activities,5
+2722,Mumbai Suburban,.49150693,639,Other information service activities,6
+2722,Mumbai Suburban,.4906567,592,Sound recording and music publishing activities,7
+2722,Mumbai Suburban,.4810631,823,Organization of conventions and trade shows,8
+2722,Mumbai Suburban,.46561763,732,Market research and public opinion polling,9
+2722,Mumbai Suburban,.44467989,822,Activities of call centres,10
+2723,Mumbai,.64722365,151,"Tanning and dressing of leather; manuf. of luggage, handbags, …",1
+2723,Mumbai,.61352289,143,Manufacture of knitted and crocheted apparel,2
+2723,Mumbai,.6001339,464,Wholesale of household goods,3
+2723,Mumbai,.49426648,382,Waste treatment and disposal,4
+2723,Mumbai,.42738014,370,Sewerage,5
+2723,Mumbai,.41379312,812,Cleaning activities,6
+2723,Mumbai,.38611782,501,Sea and coastal water transport,7
+2723,Mumbai,.37089071,466,Other specialized wholesale,8
+2723,Mumbai,.35813951,823,Organization of conventions and trade shows,9
+2723,Mumbai,.35583162,661,"Activities auxiliary to financial service act., except insurance …",10
+2724,Raigarh,.39504844,192,Manufacture of refined petroleum products,1
+2724,Raigarh,.27208978,91,Support activities for petroleum and natural gas mining,2
+2724,Raigarh,.2264151,203,Manufacture of man-made fibres,3
+2724,Raigarh,.16869919,774,Leasing of nonfinancial intangible assets,4
+2724,Raigarh,.15775774,31,Fishing,5
+2724,Raigarh,.14590348,267,Manufacture of optical instruments and equipment,6
+2724,Raigarh,.13235293,266,"Manufacture   of   irradiation,   electromedical  …",7
+2724,Raigarh,.12787488,811,Combined facilities support activities,8
+2724,Raigarh,.12751225,491,Transport via railways,9
+2724,Raigarh,.12409813,99,Support activities for other mining and quarrying,10
+2725,Pune,.81127954,291,Manufacture of motor vehicles,1
+2725,Pune,.75216806,262,Manufacture of computers and peripheral equipment,2
+2725,Pune,.58767539,353,Steam and air conditioning supply,3
+2725,Pune,.55822217,273,Manufacture of wiring and wiring devices,4
+2725,Pune,.55338752,309,Manufacture of transport equipment n.e.c.,5
+2725,Pune,.49836451,620,"Computer programming, consultancy and related activities",6
+2725,Pune,.43707713,712,Technical testing and analysis,7
+2725,Pune,.43487063,281,Manufacture of general purpose machinery,8
+2725,Pune,.41984731,304,Manufacture of military fighting vehicles,9
+2725,Pune,.38806883,275,Manufacture of domestic appliances,10
+2726,Ahmadnagar,.40973315,429,Construction of other civil engineering projects,1
+2726,Ahmadnagar,.17595711,103,Processing and preserving of fruit and vegetables,2
+2726,Ahmadnagar,.13078555,17,"Hunting, trapping and related service activities",3
+2726,Ahmadnagar,.099358968,653,Pension funding,4
+2726,Ahmadnagar,.091149345,14,Animal production,5
+2726,Ahmadnagar,.088295542,292,Manufacture of bodies (coachwork) for motor vehicles; trailers …,6
+2726,Ahmadnagar,.078414842,872,"Residential care activities for mental retardation, mental health …",7
+2726,Ahmadnagar,.073734142,13,Plant propagation,8
+2726,Ahmadnagar,.071936056,331,"Repair of fabricated metal products, machinery and equipment",9
+2726,Ahmadnagar,.069756135,120,Manufacture of tobacco products,10
+2727,Bid,.24358974,653,Pension funding,1
+2727,Bid,.086580083,21,Silviculture and other forestry activities,2
+2727,Bid,.060864273,252,Manufacture of weapons and ammunition,3
+2727,Bid,.050500985,478,Retail sale via stalls and markets,4
+2727,Bid,.04612365,24,Support services to forestry,5
+2727,Bid,.044568244,322,Manufacture of musical instruments,6
+2727,Bid,.044126853,462,Wholesale of agricultural raw materials and live animals,7
+2727,Bid,.042110655,563,Beverage serving activities,8
+2727,Bid,.038577784,162,"Manufacture of products of wood, cork, straw, plaiting materials",9
+2727,Bid,.036798529,811,Combined facilities support activities,10
+2728,Latur,.13940093,431,Demolition and site preparation,1
+2728,Latur,.11892881,478,Retail sale via stalls and markets,2
+2728,Latur,.074064314,104,Manufacture of vegetable and animal oils and fats,3
+2728,Latur,.073326752,463,"Wholesale of food, beverages and tobacco",4
+2728,Latur,.064870097,932,Other amusement and recreation activities,5
+2728,Latur,.062742144,559,Other accommodation,6
+2728,Latur,.043759696,910,"Libraries, archives, museums and other cultural activities",7
+2728,Latur,.042613637,783,"Human resources provision, management of human resources func.",8
+2728,Latur,.039175428,772,Renting and leasing of personal and household goods,9
+2728,Latur,.038708463,106,"Manufacture of grain mill products, starches and starch products",10
+2729,Osmanabad,.18959066,649,"Other financial service activities, except insurance, pension ….",1
+2729,Osmanabad,.072330654,72,Mining of non-ferrous metal ores,2
+2729,Osmanabad,.062705114,750,Veterinary activities,3
+2729,Osmanabad,.055720653,582,Software publishing,4
+2729,Osmanabad,.048762616,271,"Manufacture of electric motors, generators, transformers …",5
+2729,Osmanabad,.047436535,105,Manufacture of dairy products,6
+2729,Osmanabad,.04679887,16,Support activities to agriculture and post-harvest crop activities,7
+2729,Osmanabad,.045310047,478,Retail sale via stalls and markets,8
+2729,Osmanabad,.043300308,461,Wholesale on a fee or contract basis,9
+2729,Osmanabad,.04151728,81,"Quarrying of stone, sand and clay",10
+2730,Solapur,.48995736,120,Manufacture of tobacco products,1
+2730,Solapur,.26136363,803,Investigation activities,2
+2730,Solapur,.20479994,771,Renting and leasing of motor vehicles,3
+2730,Solapur,.13305125,302,Manufacture of railway locomotives and rolling stock,4
+2730,Solapur,.12732306,382,Waste treatment and disposal,5
+2730,Solapur,.11777135,14,Animal production,6
+2730,Solapur,.11413836,702,Management consultancy activities,7
+2730,Solapur,.10852888,422,Construction of utility projects,8
+2730,Solapur,.096382491,108,Manufacture of prepared animal feeds,9
+2730,Solapur,.091112018,462,Wholesale of agricultural raw materials and live animals,10
+2731,Satara,.23507287,302,Manufacture of railway locomotives and rolling stock,1
+2731,Satara,.21059018,643,"Trusts, funds and other financial vehicles",2
+2731,Satara,.20084073,325,Manufacture of medical and dental instruments and supplies,3
+2731,Satara,.13856381,14,Animal production,4
+2731,Satara,.13790296,271,"Manufacture of electric motors, generators, transformers …",5
+2731,Satara,.12271837,13,Plant propagation,6
+2731,Satara,.12161445,421,Construction of roads and railways,7
+2731,Satara,.10757576,502,Inland water transport,8
+2731,Satara,.099719927,551,Short term accommodation activities,9
+2731,Satara,.096565679,16,Support activities to agriculture and post-harvest crop activities,10
+2732,Ratnagiri,.36079544,783,"Human resources provision, management of human resources func.",1
+2732,Ratnagiri,.14049889,31,Fishing,2
+2732,Ratnagiri,.14009762,264,Manufacture of consumer electronics,3
+2732,Ratnagiri,.11514523,23,Gathering of non-wood forest products,4
+2732,Ratnagiri,.091905564,872,"Residential care activities for mental retardation, mental health …",5
+2732,Ratnagiri,.08879035,13,Plant propagation,6
+2732,Ratnagiri,.075507313,22,Logging,7
+2732,Ratnagiri,.068587109,103,Processing and preserving of fruit and vegetables,8
+2732,Ratnagiri,.066536553,478,Retail sale via stalls and markets,9
+2732,Ratnagiri,.063530758,81,"Quarrying of stone, sand and clay",10
+2733,Sindhudurg,.40606061,71,Mining of iron ores,1
+2733,Sindhudurg,.1278749,811,Combined facilities support activities,2
+2733,Sindhudurg,.093927957,31,Fishing,3
+2733,Sindhudurg,.092867754,582,Software publishing,4
+2733,Sindhudurg,.047619049,99,Support activities for other mining and quarrying,5
+2733,Sindhudurg,.04578571,949,Activities of other membership organizations,6
+2733,Sindhudurg,.040708162,522,Support activities for transportation,7
+2733,Sindhudurg,.039793648,162,"Manufacture of products of wood, cork, straw, plaiting materials",8
+2733,Sindhudurg,.037942667,872,"Residential care activities for mental retardation, mental health …",9
+2733,Sindhudurg,.037909966,103,Processing and preserving of fruit and vegetables,10
+2734,Kolhapur,.31740227,432,"Electrical, plumbing and other construction installation activities",1
+2734,Kolhapur,.25898734,282,Manufacture of special-purpose machinery,2
+2734,Kolhapur,.23194902,22,Logging,3
+2734,Kolhapur,.22786133,14,Animal production,4
+2734,Kolhapur,.21636075,131,"Spinning, weaving and finishing of textiles",5
+2734,Kolhapur,.19961271,932,Other amusement and recreation activities,6
+2734,Kolhapur,.15227021,89,Mining and quarrying n.e.c.,7
+2734,Kolhapur,.14451469,162,"Manufacture of products of wood, cork, straw, plaiting materials",8
+2734,Kolhapur,.13967121,107,Manufacture of other food products,9
+2734,Kolhapur,.13311984,681,Real estate activities with own or leased property,10
+2735,Sangli,.20902845,24,Support services to forestry,1
+2735,Sangli,.189441,62,Extraction of natural gas,2
+2735,Sangli,.13604432,14,Animal production,3
+2735,Sangli,.12975185,473,Retail sale of automotive fuel in specialized stores,4
+2735,Sangli,.12233719,252,Manufacture of weapons and ammunition,5
+2735,Sangli,.10303031,502,Inland water transport,6
+2735,Sangli,.089552246,72,Mining of non-ferrous metal ores,7
+2735,Sangli,.089332461,439,Other specialized construction activities,8
+2735,Sangli,.077409558,108,Manufacture of prepared animal feeds,9
+2735,Sangli,.07166148,360,"Water collection, treatment and supply",10
