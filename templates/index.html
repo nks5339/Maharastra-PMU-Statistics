@@ -38,7 +38,8 @@
       --accent4: #f59e0b;
       --shadow: 0 32px 80px rgba(0,0,0,0.5);
       --shadow2: 0 4px 24px rgba(0,0,0,0.32);
-      --drawer-w: 430px;
+      --split-left: 40%;
+      --splitter-w: 18px;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -51,11 +52,50 @@
     }
     button { font: inherit; cursor: pointer; }
     #app {
-      display: grid;
-      grid-template-columns: 1fr var(--drawer-w);
+      display: flex;
       height: 100%;
+      width: 100%;
+      overflow: hidden;
     }
-    .map-wrap { position: relative; height: 100%; }
+    .map-wrap {
+      position: relative;
+      height: 100%;
+      flex: 0 0 var(--split-left);
+      min-width: 320px;
+    }
+    .splitter {
+      width: var(--splitter-w);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(8,15,28,1), rgba(12,20,36,1));
+      cursor: col-resize;
+      user-select: none;
+      touch-action: none;
+    }
+    .splitter-handle {
+      width: 14px;
+      height: 48px;
+      border-radius: 999px;
+      border: 1px solid rgba(51,195,255,0.35);
+      background: rgba(51,195,255,0.12);
+      color: #d6f2ff;
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow2);
+    }
+    .splitter:focus-visible .splitter-handle {
+      outline: 2px solid rgba(51,195,255,0.55);
+      outline-offset: 2px;
+    }
+    body.resizing, body.resizing * {
+      cursor: col-resize !important;
+      user-select: none !important;
+    }
     #map { width: 100%; height: 100%; }
     .leaflet-container { background: #08121c; }
     .leaflet-control-attribution {
@@ -153,26 +193,31 @@
     }
 
     .drawer {
+      flex: 1 1 auto;
       height: 100%;
+      min-width: 320px;
       overflow-y: auto;
-      border-left: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(7,13,24,1), rgba(8,15,28,1));
+      border-left: 1px solid #d3dfec;
+      background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+      color: #11314d;
       padding: 20px;
     }
     .panel {
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.76);
+      border: 1px solid #d5e2f0;
+      background: #ffffff;
       border-radius: 18px;
       padding: 16px;
       margin-bottom: 16px;
+      box-shadow: 0 10px 28px rgba(20, 54, 90, 0.08);
     }
     .district-title {
       font-size: 24px;
       font-weight: 800;
       margin-bottom: 4px;
+      color: #12385a;
     }
     .district-meta {
-      color: var(--muted);
+      color: #5a7795;
       font-size: 12px;
     }
     .district-picker {
@@ -181,7 +226,7 @@
     .district-picker label {
       display: block;
       margin-bottom: 8px;
-      color: var(--muted2);
+      color: #53718f;
       font-size: 12px;
       font-weight: 500;
     }
@@ -189,16 +234,16 @@
       width: 100%;
       padding: 10px 12px;
       border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-      color: var(--text);
+      border: 1px solid #c9d9ea;
+      background: #f7fbff;
+      color: #11314d;
       font-size: 13px;
       font-family: inherit;
       outline: none;
     }
     .district-select:focus {
-      border-color: var(--border-accent);
-      box-shadow: 0 0 0 2px rgba(51,195,255,0.12);
+      border-color: #4ea4e6;
+      box-shadow: 0 0 0 2px rgba(78,164,230,0.22);
     }
     .index-tabs {
       display: grid;
@@ -209,26 +254,36 @@
     .tab-btn {
       padding: 10px 8px;
       border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-      color: var(--muted2);
+      border: 1px solid #cfdceb;
+      background: #f5f9fd;
+      color: #41607f;
       font-size: 12px;
       font-weight: 600;
     }
-    .tab-btn.active.spec { color: var(--accent); border-color: rgba(51,195,255,0.45); background: rgba(51,195,255,0.12); }
-    .tab-btn.active.comb { color: var(--accent3); border-color: rgba(167,139,250,0.45); background: rgba(167,139,250,0.12); }
-    .tab-btn.active.prod { color: var(--accent4); border-color: rgba(245,158,11,0.45); background: rgba(245,158,11,0.12); }
+    .tab-btn.active.spec { color: #0e79cb; border-color: #87cbf6; background: #e9f6ff; }
+    .tab-btn.active.comb { color: #6f45c9; border-color: #c8b6f6; background: #f2ecff; }
+    .tab-btn.active.prod { color: #ba6b00; border-color: #ffd08f; background: #fff5e5; }
 
     .chart-wrap {
       height: 340px;
       margin-top: 12px;
       padding: 12px;
       border-radius: 16px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.025);
+      border: 1px solid #d6e3f2;
+      background: linear-gradient(180deg, #f8fcff 0%, #eef5ff 100%);
     }
-    .chart-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-    .chart-sub { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .chart-title {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: #000000;
+    }
+    .chart-sub {
+      font-size: 12px;
+      color: #000000;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
 
     table {
       width: 100%;
@@ -237,15 +292,29 @@
     }
     th, td {
       padding: 10px 8px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid #e1ebf6;
       text-align: left;
       vertical-align: top;
     }
+    #rankTable thead tr {
+      background: linear-gradient(90deg, #e8f5ff 0%, #efe9ff 45%, #fff0dd 100%);
+    }
     th {
-      color: var(--muted);
+      color: #486a8c;
       text-transform: uppercase;
       letter-spacing: .08em;
       font-size: 10px;
+    }
+    #rankTable th:nth-child(1) { color: #0d74c4; }
+    #rankTable th:nth-child(2) { color: #7146cc; }
+    #rankTable th:nth-child(3) { color: #b76b00; }
+    #rankTable tbody tr:nth-child(odd) { background: #f8fbff; }
+    #rankTable tbody tr:nth-child(even) { background: #f1f7fd; }
+    #rankTable tbody tr:hover { background: #e8f4ff; }
+    #rankTable tbody td { color: #000000; }
+    #rankTable tbody tr td:nth-child(2) > div:first-child {
+      color: #000000;
+      font-weight: 600;
     }
     .rank-pill {
       display: inline-flex;
@@ -254,15 +323,31 @@
       border-radius: 8px;
       align-items: center;
       justify-content: center;
-      background: rgba(255,255,255,0.07);
+      background: linear-gradient(135deg, #73c7ff, #4aa5f0);
+      color: #000000;
       font-weight: 700;
+      box-shadow: 0 3px 10px rgba(26, 100, 167, 0.25);
     }
-    .small-muted { color: var(--muted); font-size: 11px; margin-top: 2px; }
+    #rankTable tbody tr:nth-child(1) .rank-pill {
+      background: linear-gradient(135deg, #ffd65b, #ffb14a);
+      color: #6a4200;
+    }
+    #rankTable tbody tr:nth-child(2) .rank-pill {
+      background: linear-gradient(135deg, #d5e3f5, #abc2dc);
+      color: #254666;
+    }
+    #rankTable tbody tr:nth-child(3) .rank-pill {
+      background: linear-gradient(135deg, #ffc6a0, #f39e66);
+      color: #6a3011;
+    }
+    .small-muted { color: #000000; font-size: 11px; margin-top: 2px; opacity: 0.8; }
     .value-pill {
       display: inline-block;
       padding: 4px 8px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.06);
+      background: linear-gradient(135deg, #e4f7ff, #c5ecff);
+      color: #000000;
+      border: 1px solid #9dd8f3;
       font-weight: 700;
     }
     .map-label {
@@ -276,14 +361,36 @@
       box-shadow: var(--shadow2);
     }
     @media (max-width: 980px) {
-      #app { grid-template-columns: 1fr; }
+      html, body {
+        overflow: auto;
+        height: auto;
+      }
+      #app {
+        display: block;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+      }
+      .map-wrap {
+        height: 55vh;
+        min-height: 360px;
+        min-width: 0;
+      }
+      .splitter {
+        display: none;
+      }
       .drawer {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: min(430px, 100vw);
-        box-shadow: var(--shadow);
+        position: relative;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        max-height: none;
+        border-left: none;
+        border-top: 1px solid #d3dfec;
+        box-shadow: none;
       }
     }
   </style>
@@ -314,6 +421,17 @@
       </div>
 
       <div id="map"></div>
+    </div>
+
+    <div
+      id="splitter"
+      class="splitter"
+      role="separator"
+      aria-orientation="vertical"
+      aria-label="Resize map and data panels"
+      tabindex="0"
+    >
+      <span class="splitter-handle">↔</span>
     </div>
 
     <aside class="drawer">
@@ -388,6 +506,12 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
     const chartTitleEl = document.getElementById("chartTitle");
     const chartSubEl = document.getElementById("chartSub");
     const rankTable = document.getElementById("rankTable");
+    const appEl = document.getElementById("app");
+    const splitterEl = document.getElementById("splitter");
+
+    const DEFAULT_MAP_SPLIT = 40;
+    const MIN_PANE_WIDTH = 340;
+    let isResizingPanels = false;
 
     async function fetchJSON(url) {
       const res = await fetch(url);
@@ -400,6 +524,71 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
       }
       if (!res.ok) throw new Error(data.detail || "Request failed");
       return data;
+    }
+
+    function isMobileLayout() {
+      return window.matchMedia("(max-width: 980px)").matches;
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function setMapSplitPercent(percent) {
+      if (isMobileLayout()) return;
+
+      const rect = appEl.getBoundingClientRect();
+      if (!rect.width) return;
+
+      const splitterWidth = splitterEl.offsetWidth || 18;
+      const splitterPercent = (splitterWidth / rect.width) * 100;
+      const minPercent = (MIN_PANE_WIDTH / rect.width) * 100;
+      const maxPercent = 100 - minPercent - splitterPercent;
+
+      const fallback = DEFAULT_MAP_SPLIT;
+      const candidate = Number.isFinite(percent) ? percent : fallback;
+      const bounded =
+        maxPercent <= minPercent
+          ? fallback
+          : clamp(candidate, minPercent, maxPercent);
+
+      appEl.style.setProperty("--split-left", `${bounded}%`);
+      if (map) map.invalidateSize();
+    }
+
+    function updateSplitFromPointer(clientX) {
+      const rect = appEl.getBoundingClientRect();
+      if (!rect.width) return;
+      const percent = ((clientX - rect.left) / rect.width) * 100;
+      setMapSplitPercent(percent);
+    }
+
+    function beginSplitResize(event) {
+      if (isMobileLayout()) return;
+      isResizingPanels = true;
+      document.body.classList.add("resizing");
+      if (splitterEl.setPointerCapture) splitterEl.setPointerCapture(event.pointerId);
+      updateSplitFromPointer(event.clientX);
+      event.preventDefault();
+    }
+
+    function moveSplitResize(event) {
+      if (!isResizingPanels) return;
+      updateSplitFromPointer(event.clientX);
+    }
+
+    function endSplitResize(event) {
+      if (!isResizingPanels) return;
+      isResizingPanels = false;
+      document.body.classList.remove("resizing");
+      if (
+        event &&
+        typeof event.pointerId === "number" &&
+        splitterEl.hasPointerCapture &&
+        splitterEl.hasPointerCapture(event.pointerId)
+      ) {
+        splitterEl.releasePointerCapture(event.pointerId);
+      }
     }
 
     function normalizeName(value) {
@@ -532,6 +721,7 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
       populateDistrictDropdown(districtsResp.districts);
 
       initMap(indiaGeo, mhGeo);
+      setMapSplitPercent(DEFAULT_MAP_SPLIT);
       statusText.textContent = "District view ready — choose from map or dropdown";
     }
 
@@ -703,8 +893,10 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
           plugins: {
             legend: { display: false },
             tooltip: {
-              backgroundColor: "rgba(8,16,30,0.94)",
-              borderColor: "rgba(255,255,255,0.1)",
+              backgroundColor: "rgba(255,255,255,0.98)",
+              titleColor: "#000000",
+              bodyColor: "#000000",
+              borderColor: "#c5d7ea",
               borderWidth: 1,
               callbacks: {
                 label: ctx => ` ${formatValue(ctx.raw)}`
@@ -713,11 +905,17 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
           },
           scales: {
             x: {
-              ticks: { color: "#9eb4cb" },
-              grid: { color: "rgba(255,255,255,0.06)" }
+              ticks: {
+                color: "#000000",
+                font: { size: 11, weight: "700" }
+              },
+              grid: { color: "#d8e4f1" }
             },
             y: {
-              ticks: { color: "#e7f0fb", font: { size: 11 } },
+              ticks: {
+                color: "#000000",
+                font: { size: 12, weight: "700" }
+              },
               grid: { display: false }
             }
           }
@@ -775,6 +973,33 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
 
     districtSelectEl.addEventListener("change", async event => {
       await selectDistrictByCode(event.target.value);
+    });
+
+    splitterEl.addEventListener("pointerdown", beginSplitResize);
+    window.addEventListener("pointermove", moveSplitResize);
+    window.addEventListener("pointerup", endSplitResize);
+    window.addEventListener("pointercancel", endSplitResize);
+    splitterEl.addEventListener("dblclick", () => setMapSplitPercent(DEFAULT_MAP_SPLIT));
+    splitterEl.addEventListener("keydown", event => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        const current = parseFloat(getComputedStyle(appEl).getPropertyValue("--split-left")) || DEFAULT_MAP_SPLIT;
+        setMapSplitPercent(current - 2);
+      }
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        const current = parseFloat(getComputedStyle(appEl).getPropertyValue("--split-left")) || DEFAULT_MAP_SPLIT;
+        setMapSplitPercent(current + 2);
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (isMobileLayout()) {
+        appEl.style.removeProperty("--split-left");
+        if (map) map.invalidateSize();
+        return;
+      }
+      const current = parseFloat(getComputedStyle(appEl).getPropertyValue("--split-left")) || DEFAULT_MAP_SPLIT;
+      setMapSplitPercent(current);
     });
 
     document.getElementById("focusBtn").addEventListener("click", () => {
