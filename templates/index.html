@@ -175,6 +175,31 @@
       color: var(--muted);
       font-size: 12px;
     }
+    .district-picker {
+      margin-top: 12px;
+    }
+    .district-picker label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted2);
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .district-select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+    }
+    .district-select:focus {
+      border-color: var(--border-accent);
+      box-shadow: 0 0 0 2px rgba(51,195,255,0.12);
+    }
     .index-tabs {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -273,7 +298,7 @@
         </div>
         <div class="btn-row">
           <button class="btn" id="replayBtn">↺ Replay zoom</button>
-          <button class="btn primary" id="focusBtn">⊙ Focus Maharashtra</button>
+          <button class="btn primary" id="focusBtn">⊙ Focus </button>
         </div>
       </div>
 
@@ -283,7 +308,7 @@
       </div>
 
       <div class="hero-card">
-        <div class="eyebrow">District Intelligence POC</div>
+        <div class="eyebrow">District Intelligence Platform</div>
         <!-- <h1>India to district-level industry insights.</h1> -->
         <!-- <p>Click a Maharashtra district, then switch between Specialisation, Combined, and Productivity Index views.</p> -->
       </div>
@@ -295,6 +320,12 @@
       <div class="panel">
         <div class="district-title" id="districtName">Select a district</div>
         <div class="district-meta">District Code: <span id="districtCode">—</span></div>
+        <div class="district-picker">
+          <label for="districtSelect">Select district</label>
+          <select id="districtSelect" class="district-select">
+            <option value="">Select a district</option>
+          </select>
+        </div>
 
         <div class="index-tabs">
           <button class="tab-btn spec active" data-type="specialisation">Specialisation</button>
@@ -305,7 +336,7 @@
 
       <div class="panel">
         <div class="chart-title" id="chartTitle">Top 10 Industries</div>
-        <div class="chart-sub" id="chartSub">Select a district on the map.</div>
+        <div class="chart-sub" id="chartSub">Select a district from the map or dropdown.</div>
         <div class="chart-wrap">
           <canvas id="indexChart"></canvas>
         </div>
@@ -321,7 +352,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td colspan="3" style="color:#7b93b0;">Click a district to load data.</td></tr>
+            <tr><td colspan="3" style="color:#7b93b0;">Choose a district from the map or dropdown to load data.</td></tr>
           </tbody>
         </table>
       </div>
@@ -340,6 +371,8 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
     };
 
     const districtLookup = {};
+    const districtByCode = {};
+    const districtLayerByCode = {};
     let config = {};
     let activeDistrictCode = null;
     let activeIndexType = "specialisation";
@@ -350,6 +383,7 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
 
     const districtNameEl = document.getElementById("districtName");
     const districtCodeEl = document.getElementById("districtCode");
+    const districtSelectEl = document.getElementById("districtSelect");
     const statusText = document.getElementById("statusText");
     const chartTitleEl = document.getElementById("chartTitle");
     const chartSubEl = document.getElementById("chartSub");
@@ -384,6 +418,105 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
       );
     }
 
+    function populateDistrictDropdown(districts) {
+      districtSelectEl.innerHTML = "";
+
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = "Select a district";
+      districtSelectEl.appendChild(placeholder);
+
+      districts.forEach(d => {
+        const option = document.createElement("option");
+        option.value = String(d.district_code);
+        option.textContent = d.district_name;
+        districtSelectEl.appendChild(option);
+      });
+    }
+
+    function resetDistrictSelection() {
+      if (currentSelectedLayer && districtLayer) {
+        districtLayer.resetStyle(currentSelectedLayer);
+      }
+      currentSelectedLayer = null;
+      activeDistrictCode = null;
+      districtSelectEl.value = "";
+      districtNameEl.textContent = "Select a district";
+      districtCodeEl.textContent = "—";
+      chartTitleEl.textContent = "Top 10 Industries";
+      chartSubEl.textContent = "Select a district from the map or dropdown.";
+      if (chart) {
+        chart.destroy();
+        chart = null;
+      }
+      renderEmptyTable("Choose a district from the map or dropdown to load data.");
+      statusText.textContent = "District view ready — choose from map or dropdown";
+    }
+
+    async function selectDistrictLayer(layer, { zoom = true } = {}) {
+      if (currentSelectedLayer && currentSelectedLayer !== layer) {
+        districtLayer.resetStyle(currentSelectedLayer);
+      }
+
+      currentSelectedLayer = layer;
+      layer.setStyle({
+        color: "#ffffff",
+        weight: 3.8,
+        fillOpacity: 0.68,
+        dashArray: ""
+      });
+
+      const districtName = layer.districtName || "Unknown district";
+      const districtCode = layer.districtCode || null;
+
+      districtNameEl.textContent = districtName;
+      districtCodeEl.textContent = districtCode ?? "N/A";
+      districtSelectEl.value = districtCode ? String(districtCode) : "";
+      statusText.textContent = `${districtName} selected`;
+
+      if (!districtCode) {
+        activeDistrictCode = null;
+        renderEmptyTable("District code not found in CSV lookup.");
+        return;
+      }
+
+      activeDistrictCode = districtCode;
+      await loadDistrictData();
+
+      if (zoom) {
+        map.flyToBounds(layer.getBounds(), {
+          maxZoom: 9,
+          padding: [40, 40],
+          duration: 0.9
+        });
+      }
+    }
+
+    async function selectDistrictByCode(districtCode) {
+      const code = String(districtCode || "");
+      if (!code) {
+        resetDistrictSelection();
+        return;
+      }
+
+      const layer = districtLayerByCode[code];
+      if (!layer) {
+        if (currentSelectedLayer && districtLayer) {
+          districtLayer.resetStyle(currentSelectedLayer);
+        }
+        currentSelectedLayer = null;
+        const district = districtByCode[code];
+        districtNameEl.textContent = district?.district_name || "Select a district";
+        districtCodeEl.textContent = district?.district_code || "N/A";
+        statusText.textContent = "Selected district not found on map";
+        renderEmptyTable("Selected district geometry is not available on the map.");
+        activeDistrictCode = null;
+        return;
+      }
+
+      await selectDistrictLayer(layer, { zoom: true });
+    }
+
     async function bootstrap() {
       const [cfg, districtsResp,] = await Promise.all([
         fetchJSON("/api/config"),
@@ -394,10 +527,12 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
       config = cfg.datasets;
       districtsResp.districts.forEach(d => {
         districtLookup[d.district_key] = d;
+        districtByCode[String(d.district_code)] = d;
       });
+      populateDistrictDropdown(districtsResp.districts);
 
       initMap(indiaGeo, mhGeo);
-      statusText.textContent = "District view ready — click any district";
+      statusText.textContent = "District view ready — choose from map or dropdown";
     }
 
     function initMap(indiaGeo, mhGeo) {
@@ -455,6 +590,11 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
           const key = normalizeName(districtName);
           const districtMeta = districtLookup[key];
           const districtCode = districtMeta?.district_code || null;
+          layer.districtName = districtName;
+          layer.districtCode = districtCode;
+          if (districtCode) {
+            districtLayerByCode[String(districtCode)] = layer;
+          }
 
           layer.bindTooltip(
             `<div><strong>${districtName}</strong><br><span style="font-size:11px;color:#b8d6ef;">Code: ${districtCode ?? "N/A"}</span></div>`,
@@ -474,31 +614,7 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
           });
 
           layer.on("click", async () => {
-            if (currentSelectedLayer) districtLayer.resetStyle(currentSelectedLayer);
-            currentSelectedLayer = layer;
-            layer.setStyle({
-              color: "#ffffff",
-              weight: 3.8,
-              fillOpacity: 0.68,
-              dashArray: ""
-            });
-
-            districtNameEl.textContent = districtName;
-            districtCodeEl.textContent = districtCode ?? "N/A";
-            statusText.textContent = `${districtName} selected`;
-
-            if (!districtCode) {
-              renderEmptyTable("District code not found in CSV lookup.");
-              return;
-            }
-
-            activeDistrictCode = districtCode;
-            await loadDistrictData();
-            map.flyToBounds(layer.getBounds(), {
-              maxZoom: 9,
-              padding: [40, 40],
-              duration: 0.9
-            });
+            await selectDistrictLayer(layer, { zoom: true });
           });
         }
       }).addTo(map);
@@ -507,10 +623,10 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
       mhBounds = districtLayer.getBounds();
       map.fitBounds(indiaBounds, { padding: [50, 50] });
 
-      L.marker([20.5937, 78.9629], {
+      L.marker([25.5937, 78.9629], {
         icon: L.divIcon({
           className: "",
-          html: '<div class="map-label">India</div>',
+          html: '<div class="map-label">Bharat</div>',
           iconSize: [48, 22]
         })
       }).addTo(map);
@@ -655,6 +771,10 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
           await loadDistrictData();
         }
       });
+    });
+
+    districtSelectEl.addEventListener("change", async event => {
+      await selectDistrictByCode(event.target.value);
     });
 
     document.getElementById("focusBtn").addEventListener("click", () => {
