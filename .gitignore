@@ -54,3 +54,5 @@ settings.local.py
 # OS files
 .DS_Store
 Thumbs.db
+
+tests/

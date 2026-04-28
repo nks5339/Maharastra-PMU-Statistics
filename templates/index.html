@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maharashtra District Intelligence</title>
+  <title>Maharashtra Demand Assessment</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -350,6 +350,33 @@
       border: 1px solid #9dd8f3;
       font-weight: 700;
     }
+    .panel-footer {
+      position: sticky;
+      bottom: 0;
+      z-index: 2;
+      margin-bottom: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(6px);
+    }
+    .download-pdf-btn {
+      width: 100%;
+      border: 1px solid #1f78c7;
+      background: linear-gradient(135deg, #1f89da, #32a6ec);
+      color: #ffffff;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 11px 12px;
+      font-size: 13px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+    .download-pdf-btn:hover:not(:disabled) {
+      transform: translateY(-1px);
+    }
+    .download-pdf-btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+    }
     .map-label {
       padding: 5px 10px;
       border-radius: 999px;
@@ -400,7 +427,7 @@
     <div class="map-wrap">
       <div class="topbar">
         <div class="brand">
-          <strong>District Intelligence</strong>
+          <strong>Demand Assessment</strong>
           <!-- <span>Leaflet + FastAPI + Pandas</span> -->
         </div>
         <div class="btn-row">
@@ -415,7 +442,7 @@
       </div>
 
       <div class="hero-card">
-        <div class="eyebrow">District Intelligence Platform</div>
+        <div class="eyebrow">Demand Assessment Platform</div>
         <!-- <h1>India to district-level industry insights.</h1> -->
         <!-- <p>Click a Maharashtra district, then switch between Specialisation, Combined, and Productivity Index views.</p> -->
       </div>
@@ -474,6 +501,10 @@
           </tbody>
         </table>
       </div>
+
+      <div class="panel panel-footer">
+        <button id="downloadPdfBtn" class="download-pdf-btn" type="button" disabled>Download PDF Report</button>
+      </div>
     </aside>
   </div>
 
@@ -506,6 +537,7 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
     const chartTitleEl = document.getElementById("chartTitle");
     const chartSubEl = document.getElementById("chartSub");
     const rankTable = document.getElementById("rankTable");
+    const downloadPdfBtn = document.getElementById("downloadPdfBtn");
     const appEl = document.getElementById("app");
     const splitterEl = document.getElementById("splitter");
 
@@ -532,6 +564,10 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
 
     function clamp(value, min, max) {
       return Math.min(max, Math.max(min, value));
+    }
+
+    function setDownloadButtonState() {
+      downloadPdfBtn.disabled = !activeDistrictCode;
     }
 
     function setMapSplitPercent(percent) {
@@ -638,6 +674,7 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
         chart.destroy();
         chart = null;
       }
+      setDownloadButtonState();
       renderEmptyTable("Choose a district from the map or dropdown to load data.");
       statusText.textContent = "District view ready — choose from map or dropdown";
     }
@@ -665,11 +702,13 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
 
       if (!districtCode) {
         activeDistrictCode = null;
+        setDownloadButtonState();
         renderEmptyTable("District code not found in CSV lookup.");
         return;
       }
 
       activeDistrictCode = districtCode;
+      setDownloadButtonState();
       await loadDistrictData();
 
       if (zoom) {
@@ -700,6 +739,7 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
         statusText.textContent = "Selected district not found on map";
         renderEmptyTable("Selected district geometry is not available on the map.");
         activeDistrictCode = null;
+        setDownloadButtonState();
         return;
       }
 
@@ -865,6 +905,7 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
 
       renderChart(data);
       renderTable(data);
+      setDownloadButtonState();
     }
 
     function renderChart(data) {
@@ -956,6 +997,48 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
       return `rgba(${r}, ${g}, ${b}, ${alpha})`;
     }
 
+    function getSuggestedPdfFilename(contentDisposition) {
+      const match = /filename="?([^"]+)"?/i.exec(contentDisposition || "");
+      if (match && match[1]) return match[1];
+      return `maharashtra_${activeDistrictCode}_${activeIndexType}_report.pdf`;
+    }
+
+    async function downloadCurrentDistrictPdf() {
+      if (!activeDistrictCode) {
+        statusText.textContent = "Select a district before downloading report PDF.";
+        return;
+      }
+
+      const activeDataset = config[activeIndexType];
+      statusText.textContent = `Preparing ${activeDataset.label} PDF report...`;
+
+      const url = `/api/district-report-pdf?district_code=${activeDistrictCode}&dataset_type=${activeIndexType}`;
+      const response = await fetch(url);
+      if (!response.ok) {
+        const text = await response.text();
+        let message = "Failed to download PDF report.";
+        try {
+          const payload = JSON.parse(text);
+          message = payload.detail || message;
+        } catch {
+          if (text) message = text;
+        }
+        throw new Error(message);
+      }
+
+      const blob = await response.blob();
+      const fileName = getSuggestedPdfFilename(response.headers.get("Content-Disposition"));
+      const blobUrl = window.URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = blobUrl;
+      anchor.download = fileName;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      window.URL.revokeObjectURL(blobUrl);
+      statusText.textContent = `${activeDataset.label} PDF report downloaded.`;
+    }
+
     document.querySelectorAll(".tab-btn").forEach(btn => {
       btn.addEventListener("click", async () => {
         document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
@@ -973,6 +1056,15 @@ const mhGeo = {"type":"FeatureCollection","features":[{"type":"Feature","propert
 
     districtSelectEl.addEventListener("change", async event => {
       await selectDistrictByCode(event.target.value);
+    });
+
+    downloadPdfBtn.addEventListener("click", async () => {
+      try {
+        await downloadCurrentDistrictPdf();
+      } catch (error) {
+        console.error(error);
+        statusText.textContent = error.message || "Failed to download PDF report.";
+      }
     });
 
     splitterEl.addEventListener("pointerdown", beginSplitResize);

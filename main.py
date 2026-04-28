@@ -1,12 +1,20 @@
+import re
+from datetime import datetime
+from io import BytesIO
 from pathlib import Path
 from functools import lru_cache
 from typing import Dict, List, Optional
 
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Query, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+from reportlab.lib.units import mm
+from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -41,6 +49,120 @@ templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 
 def normalize_name(value: str) -> str:
     return str(value).strip().lower()
+
+
+def format_report_value(value: float, dataset_type: str) -> str:
+    return f"{value:.2f}" if dataset_type == "productivity" else f"{value:.4f}"
+
+
+def build_report_filename(district_name: str, dataset_type: str) -> str:
+    district_slug = re.sub(r"[^a-z0-9]+", "_", normalize_name(district_name)).strip("_")
+    district_slug = district_slug or "district"
+    return f"maharashtra_{district_slug}_{dataset_type}_report.pdf"
+
+
+def build_district_report_pdf(
+    report: Dict,
+    state_name: str = "Maharashtra",
+    generated_at_text: Optional[str] = None,
+) -> bytes:
+    timestamp = generated_at_text or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(
+        buffer,
+        pagesize=A4,
+        leftMargin=18 * mm,
+        rightMargin=18 * mm,
+        topMargin=16 * mm,
+        bottomMargin=16 * mm,
+        title="District Intelligence Report",
+    )
+
+    styles = getSampleStyleSheet()
+    heading_style = ParagraphStyle(
+        "ReportHeading",
+        parent=styles["Heading1"],
+        fontName="Helvetica-Bold",
+        fontSize=18,
+        textColor=colors.HexColor("#0f2843"),
+        spaceAfter=8,
+    )
+    meta_style = ParagraphStyle(
+        "ReportMeta",
+        parent=styles["Normal"],
+        fontName="Helvetica",
+        fontSize=10,
+        textColor=colors.HexColor("#1f3f5f"),
+        leading=14,
+    )
+    section_style = ParagraphStyle(
+        "SectionHeading",
+        parent=styles["Heading2"],
+        fontName="Helvetica-Bold",
+        fontSize=12,
+        textColor=colors.HexColor("#143a63"),
+        spaceBefore=10,
+        spaceAfter=6,
+    )
+    cell_style = ParagraphStyle(
+        "CellText",
+        parent=styles["Normal"],
+        fontName="Helvetica",
+        fontSize=9,
+        leading=12,
+        textColor=colors.black,
+    )
+
+    elements = [
+        Paragraph("District Intelligence Report", heading_style),
+        Paragraph(f"<b>State:</b> {state_name}", meta_style),
+        Paragraph(f"<b>District Name:</b> {report['district_name']}", meta_style),
+        Paragraph(f"<b>District Code:</b> {report['district_code']}", meta_style),
+        Paragraph(f"<b>Index Type:</b> {report['dataset_label']}", meta_style),
+        Paragraph(f"<b>Generated At:</b> {timestamp}", meta_style),
+        Spacer(1, 8),
+        Paragraph("Top 10 Industry Rankings", section_style),
+    ]
+
+    table_rows = [["Rank", "Industry", "Value"]]
+    for row in report["top_10"]:
+        table_rows.append(
+            [
+                str(row["rank"]),
+                Paragraph(str(row["nic3_name"]), cell_style),
+                format_report_value(float(row["value"]), report["dataset_type"]),
+            ]
+        )
+
+    table = Table(table_rows, colWidths=[22 * mm, 108 * mm, 34 * mm], repeatRows=1)
+    table.setStyle(
+        TableStyle(
+            [
+                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e9f3ff")),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#103357")),
+                ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+                ("FONTSIZE", (0, 0), (-1, 0), 10),
+                ("ALIGN", (0, 0), (0, -1), "CENTER"),
+                ("ALIGN", (2, 1), (2, -1), "RIGHT"),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                ("FONTNAME", (0, 1), (-1, -1), "Helvetica"),
+                ("FONTSIZE", (0, 1), (-1, -1), 9),
+                ("TEXTCOLOR", (0, 1), (-1, -1), colors.black),
+                ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.whitesmoke, colors.HexColor("#f5f9ff")]),
+                ("GRID", (0, 0), (-1, -1), 0.6, colors.HexColor("#b7cbe0")),
+                ("LEFTPADDING", (0, 0), (-1, -1), 6),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 6),
+                ("TOPPADDING", (0, 0), (-1, -1), 6),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
+            ]
+        )
+    )
+    elements.append(table)
+
+    doc.build(elements)
+    pdf_bytes = buffer.getvalue()
+    buffer.close()
+    return pdf_bytes
 
 
 def validate_dataframe(df: pd.DataFrame, dataset_type: str) -> pd.DataFrame:
@@ -216,3 +338,21 @@ def district_data(
         "color": config["color"],
         "top_10": rows,
     }
+
+
+@app.get("/api/district-report-pdf")
+def district_report_pdf(
+    dataset_type: str = Query(..., pattern="^(specialisation|combined|productivity)$"),
+    district_code: int = Query(..., ge=1),
+):
+    report = district_data(dataset_type=dataset_type, district_code=district_code)
+    filename = build_report_filename(
+        district_name=report["district_name"],
+        dataset_type=report["dataset_type"],
+    )
+    pdf_bytes = build_district_report_pdf(report=report, state_name="Maharashtra")
+    return StreamingResponse(
+        BytesIO(pdf_bytes),
+        media_type="application/pdf",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
